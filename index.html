@@ -27,6 +27,112 @@
             padding: 30px 20px;
         }
 
+        /* Top Utility Bar (Search, Store Locator, Sign In, Cart) */
+        .utility-bar {
+            width: calc(100% + 40px);
+            margin: -30px -20px 25px -20px;
+            border-top: 3px solid #000000;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 16px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .utility-search {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 200px;
+        }
+
+        .utility-search svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .utility-search-input {
+            border: none;
+            border-bottom: 1px solid #000000;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000000;
+            padding: 2px 0;
+            width: 160px;
+            outline: none;
+        }
+
+        .utility-search-input::placeholder {
+            color: #000000;
+            opacity: 1;
+        }
+
+        .utility-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .utility-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 3px;
+        }
+
+        .utility-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transition: width 0.3s ease;
+        }
+
+        .utility-links a:hover::after {
+            width: 100%;
+        }
+
+        .utility-links svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .cart-count {
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .utility-bar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .utility-search-input {
+                width: 120px;
+            }
+
+            .utility-links {
+                gap: 18px;
+            }
+        }
+
         /* Navigation Menu Bar Placed Right Above the Title */
         .top-nav {
             display: flex;
@@ -721,6 +827,28 @@
     </style>
 </head>
 <body>
+
+    <!-- Top Utility Bar: Search, Store Locator, Sign In, Cart -->
+    <div class="utility-bar">
+        <div class="utility-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" class="utility-search-input" placeholder="SEARCH">
+        </div>
+        <div class="utility-links">
+            <a href="#store-locator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Store Locator
+            </a>
+            <a href="#signin">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Sign In
+            </a>
+            <a href="#cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
 
     <!-- Navigation Bar Added Above the Title -->
     <ul class="top-nav">
