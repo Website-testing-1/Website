@@ -267,7 +267,7 @@
 
         .shop-now-btn:hover {
             background-color: #2b2b2b;
-            transform: translateY(-20px);
+            transform: translateY(-2px);
         }
 
         .sales-image-side {
@@ -278,31 +278,12 @@
             height: 100%;
         }
 
-        /* Rotating container for the fading/flipping lipstick images */
-        .lipstick-rotator {
-            position: relative;
+        .sales-image-side img {
             width: 100%;
             max-width: 360px;
-            height: 360px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lipstick-slide {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: contain;
             filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.3));
-            opacity: 0;
-            transform: scale(0.95) rotateY(15deg);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-        }
-
-        .lipstick-slide.active {
-            opacity: 1;
-            transform: scale(1) rotateY(0deg);
         }
 
         /* Description text placed directly underneath the lipstick image without any container */
@@ -465,7 +446,7 @@
             </div>
         </div>
 
-        <!-- SECTION 4: Winter Sales Banner with Fading/Flipping Lipsticks in Red, Brown, and Pink -->
+        <!-- SECTION 4: Winter Sales Banner with Fixed Single Image and Descriptions -->
         <div class="sales-banner">
             <div class="sales-content">
                 <span class="sales-subtitle">Winter Sales Are Here</span>
@@ -475,17 +456,7 @@
             </div>
             <div class="sales-image-side">
                 <div style="display: flex; flex-direction: column; width: 100%; align-items: flex-end;">
-                    
-                    <!-- Fading/Flipping Rotator Container -->
-                    <div class="lipstick-rotator">
-                        <!-- Red Lipstick Slide -->
-                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=800&q=80" alt="Glassy Red Lipstick" class="lipstick-slide active">
-                        <!-- Brown Lipstick Slide -->
-                        <img src="https://images.unsplash.com/photo-1631214524020-7e1819a88cf0?auto=format&fit=crop&w=800&q=80" alt="Velvety Matte Brown Lipstick" class="lipstick-slide">
-                        <!-- Pink Lipstick Slide -->
-                        <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Creamy Satin Pink Lipstick" class="lipstick-slide">
-                    </div>
-
+                    <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Cosmetics Collection">
                     <div class="lipstick-description">
                         Featuring our iconic trio: a bold, glassy <strong>red</strong>, a rich, velvety matte <strong>brown</strong>, and a creamy satin <strong>pink</strong>.
                     </div>
@@ -494,21 +465,6 @@
         </div>
 
     </div>
-
-    <!-- JavaScript to Handle the Fade/Flip Rotation -->
-    <script>
-        const slides = document.querySelectorAll('.lipstick-slide');
-        let currentSlide = 0;
-
-        function nextSlide() {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
-
-        // Change slide every 3.5 seconds
-        setInterval(nextSlide, 3500);
-    </script>
 
 </body>
 </html>
