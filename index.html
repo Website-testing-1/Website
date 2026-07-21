@@ -44,7 +44,7 @@
         .main-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 35px; /* Small gap between the two sections */
+            gap: 35px;
             max-width: 950px;
             width: 100%;
         }
@@ -107,6 +107,80 @@
             border: 3px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* Carousel Section Style */
+        .carousel-card {
+            background-color: #4a5d54;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .carousel-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Carousel Track Layout */
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scrollbar-color: #ffccd5 #3a4b42;
+            scrollbar-width: thin;
+        }
+
+        .carousel-item-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .carousel-img-box {
+            min-width: 160px;
+            height: 160px;
+            border-radius: 18px; /* Square with round corners */
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .carousel-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            right: 6px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 0.65rem;
+            padding: 3px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Green Arrow Style */
+        .green-arrow {
+            color: #a3c2b4; /* Green matching/complementing theme */
+            font-size: 1.5rem;
+            font-weight: bold;
+            user-select: none;
+        }
+
         /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .section-card {
@@ -127,6 +201,10 @@
                 width: 100%;
                 max-width: 280px;
                 height: 280px;
+            }
+
+            .carousel-container {
+                justify-content: flex-start;
             }
         }
     </style>
@@ -152,12 +230,11 @@
                 </p>
             </div>
             <div class="image-side">
-                <!-- White tub/bottle skincare product photo in a square with round corners -->
                 <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Miki's Cosmetics Skincare Product">
             </div>
         </div>
 
-        <!-- SECTION 2: Kojic Acid Sakura Part (Underneath with a gap) -->
+        <!-- SECTION 2: Kojic Acid Sakura Part -->
         <div class="section-card">
             <div class="content-side">
                 <h2>Skincare Lineup</h2>
@@ -170,8 +247,68 @@
                 </p>
             </div>
             <div class="image-side">
-                <!-- Working product lineup image for Kojic Acid Sakura in a square with round corners -->
                 <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Kojic Acid Sakura Collection">
+            </div>
+        </div>
+
+        <!-- SECTION 3: 6-Image Mixed Carousel with Green Arrows -->
+        <div class="carousel-card">
+            <h3>Explore Our Collection Gallery</h3>
+            <div class="carousel-container">
+                
+                <!-- Item 1: Skincare -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80" alt="Skincare Essence">
+                        <div class="badge">Skincare</div>
+                    </div>
+                    <div class="green-arrow">&#9658;</div>
+                </div>
+
+                <!-- Item 2: Makeup -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=80" alt="Vibrant Makeup">
+                        <div class="badge">Makeup</div>
+                    </div>
+                    <div class="green-arrow">&#9658;</div>
+                </div>
+
+                <!-- Item 3: Skincare -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Hydrating Routine">
+                        <div class="badge">Skincare</div>
+                    </div>
+                    <div class="green-arrow">&#9658;</div>
+                </div>
+
+                <!-- Item 4: Makeup -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Cosmetics Palette">
+                        <div class="badge">Makeup</div>
+                    </div>
+                    <div class="green-arrow">&#9658;</div>
+                </div>
+
+                <!-- Item 5: Skincare -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1608248597359-99e6b7720993?auto=format&fit=crop&w=400&q=80" alt="Botanical Serum">
+                        <div class="badge">Skincare</div>
+                    </div>
+                    <div class="green-arrow">&#9658;</div>
+                </div>
+
+                <!-- Item 6: Makeup (Last item without trailing arrow) -->
+                <div class="carousel-item-wrapper">
+                    <div class="carousel-img-box">
+                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=80" alt="Glossy Lips">
+                        <div class="badge">Makeup</div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
