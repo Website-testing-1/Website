@@ -212,7 +212,7 @@
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             align-items: center;
-            background: linear-gradient(135deg, #a1b5c2 0%, #7b68ae 100%); /* Soft gradient matching style */
+            background: linear-gradient(135deg, #a1b5c2 0%, #7b68ae 100%);
             padding: 50px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -286,7 +286,213 @@
             filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.3));
         }
 
+        /* ==========================================
+           NEW SECTION STYLES (Mac-style Product Grid)
+           ========================================== */
+        .product-showcase-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Title on its own without any container background */
+        .showcase-main-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #000000;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        /* 3-Column Product Grid layout mimicking Mac reference image */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+        }
+
+        .product-card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .product-img-box {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #f0f0f0;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #000000;
+        }
+
+        .shade-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.7rem;
+            color: #666666;
+            font-weight: 400;
+        }
+
+        .product-shade-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .shade-name {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .color-dots {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            overflow: hidden;
+            max-width: 150px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .arrow-icon {
+            font-size: 0.75rem;
+            color: #666666;
+            cursor: pointer;
+        }
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .product-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        .product-desc {
+            font-size: 0.8rem;
+            color: #555555;
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #666666;
+            margin-top: 4px;
+        }
+
+        .stars {
+            color: #000000;
+            letter-spacing: 1px;
+            font-size: 0.7rem;
+        }
+
+        .product-pricing {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+        }
+
+        .price-main {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .price-sub {
+            font-size: 0.7rem;
+            color: #777777;
+        }
+
+        .add-to-bag-btn {
+            display: block;
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            transition: background-color 0.2s ease;
+        }
+
+        .add-to-bag-btn:hover {
+            background-color: #333333;
+        }
+
         /* Responsive design for smaller screens */
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .section-card, .sales-banner {
                 grid-template-columns: 1fr;
@@ -431,7 +637,7 @@
             </div>
         </div>
 
-        <!-- SECTION 4: Winter Sales Banner with Fixed Single Image and No Description Text -->
+        <!-- SECTION 4: Winter Sales Banner -->
         <div class="sales-banner">
             <div class="sales-content">
                 <span class="sales-subtitle">Winter Sales Are Here</span>
@@ -441,6 +647,123 @@
             </div>
             <div class="sales-image-side">
                 <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Cosmetics Collection">
+            </div>
+        </div>
+
+        <!-- SECTION 5: Makeup Palettes Showcase (Title on its own, small gap, grid layout) -->
+        <div class="product-showcase-container">
+            <h2 class="showcase-main-title">Find Your Summer Palette Combo</h2>
+            
+            <div class="product-grid">
+                
+                <!-- Palette Product 1 -->
+                <div class="product-card">
+                    <div class="product-card-top">
+                        <div class="product-img-box">
+                            <span class="product-tag">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80" alt="Sunset Glow Eye Palette">
+                            <span class="shade-count">12 shades</span>
+                        </div>
+                        <div class="product-shade-row">
+                            <span class="shade-name">SUNSET GLOW</span>
+                            <div class="color-dots">
+                                <span class="dot" style="background: #d97757;"></span>
+                                <span class="dot" style="background: #b84a39;"></span>
+                                <span class="dot" style="background: #e09f51;"></span>
+                                <span class="dot" style="background: #6e3022;"></span>
+                                <span class="dot" style="background: #c27d63;"></span>
+                            </div>
+                            <span class="arrow-icon">&gt;</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">ECLIPSE EYESHADOW PALETTE</div>
+                            <div class="product-desc">High-Pigment Pressed Powders, Metallic Shimmers, Matte Finishes</div>
+                            <div class="product-rating">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> (42)
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="product-pricing">
+                            <span class="price-main">R450.00</span>
+                            <span class="price-sub">R37.50 / g</span>
+                        </div>
+                        <a href="#bag" class="add-to-bag-btn">Add to Bag</a>
+                    </div>
+                </div>
+
+                <!-- Palette Product 2 -->
+                <div class="product-card">
+                    <div class="product-card-top">
+                        <div class="product-img-box">
+                            <span class="product-tag">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Rose Velvet Face Palette">
+                            <span class="shade-count">8 shades</span>
+                        </div>
+                        <div class="product-shade-row">
+                            <span class="shade-name">ROSE VELVET</span>
+                            <div class="color-dots">
+                                <span class="dot" style="background: #8c3f4e;"></span>
+                                <span class="dot" style="background: #bf697a;"></span>
+                                <span class="dot" style="background: #d98895;"></span>
+                                <span class="dot" style="background: #592530;"></span>
+                                <span class="dot" style="background: #a65b6b;"></span>
+                            </div>
+                            <span class="arrow-icon">&gt;</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">VELOUR BLUSH & CONTOUR PALETTE</div>
+                            <div class="product-desc">Silky Blush & Sculpting Powders, Long-Wearing Radiance</div>
+                            <div class="product-rating">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> (28)
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="product-pricing">
+                            <span class="price-main">R420.00</span>
+                            <span class="price-sub">R52.50 / g</span>
+                        </div>
+                        <a href="#bag" class="add-to-bag-btn">Add to Bag</a>
+                    </div>
+                </div>
+
+                <!-- Palette Product 3 -->
+                <div class="product-card">
+                    <div class="product-card-top">
+                        <div class="product-img-box">
+                            <span class="product-tag">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80" alt="Gilded Bronze Highlighter Palette">
+                            <span class="shade-count">6 shades</span>
+                        </div>
+                        <div class="product-shade-row">
+                            <span class="shade-name">GILDED BRONZE</span>
+                            <div class="color-dots">
+                                <span class="dot" style="background: #e6c594;"></span>
+                                <span class="dot" style="background: #bf9556;"></span>
+                                <span class="dot" style="background: #8c673b;"></span>
+                                <span class="dot" style="background: #d4a373;"></span>
+                                <span class="dot" style="background: #f4ebd9;"></span>
+                            </div>
+                            <span class="arrow-icon">&gt;</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">AURA GLOW HIGHLIGHTER PALETTE</div>
+                            <div class="product-desc">Prismatic Illuminators, Luminous Dewy Finish, Ultra-Blendable</div>
+                            <div class="product-rating">
+                                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> (156)
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="product-pricing">
+                            <span class="price-main">R395.00</span>
+                            <span class="price-sub">R65.83 / g</span>
+                        </div>
+                        <a href="#bag" class="add-to-bag-btn">Add to Bag</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
