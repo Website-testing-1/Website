@@ -286,6 +286,21 @@
             filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.3));
         }
 
+        /* Description text placed directly underneath the lipstick image without any container */
+        .lipstick-description {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: #f0f0f0;
+            line-height: 1.5;
+            z-index: 2;
+        }
+
+        .lipstick-description strong {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
         /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .section-card, .sales-banner {
@@ -431,17 +446,21 @@
             </div>
         </div>
 
-        <!-- SECTION 4: Winter Sales Banner featuring Red, Pink, and Brown Lipstick Tones -->
+        <!-- SECTION 4: Winter Sales Banner featuring Red, Pink, and Brown Lipstick Tones with direct description -->
         <div class="sales-banner">
             <div class="sales-content">
                 <span class="sales-subtitle">Winter Sales Are Here</span>
                 <h2>Up to 40% Off Selected Items</h2>
-                <p>+10% when you buy 3 products across our signature red, pink, and brown lipstick collections.</p>
+                <p>+10% when you buy 3 products across our signature lipstick collections.</p>
                 <a href="#shop" class="shop-now-btn">Shop Now</a>
             </div>
             <div class="sales-image-side">
-                <!-- High quality professional lipstick arrangement highlighting red, pink, and brown shades -->
-                <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Lipstick Collection in Red, Pink, and Brown">
+                <div style="display: flex; flex-direction: column; width: 100%; align-items: flex-end;">
+                    <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Lipstick Collection in Red, Pink, and Brown">
+                    <div class="lipstick-description">
+                        Featuring our iconic trio: a bold, glassy <strong>red</strong>, a creamy satin <strong>pink</strong>, and a rich, velvety matte <strong>brown</strong>.
+                    </div>
+                </div>
             </div>
         </div>
 
