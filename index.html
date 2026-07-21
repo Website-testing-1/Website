@@ -23,14 +23,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         /* Centered Calligraphy Title at the Top */
         header {
-            margin-bottom: 25px; /* Small gap between the title and the main section */
+            margin-bottom: 30px;
             text-align: center;
         }
 
@@ -41,76 +40,82 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
         }
 
-        /* Main Container */
-        .container {
+        /* Main Wrapper to stack sections vertically */
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 35px; /* Small gap between the two sections */
+            max-width: 950px;
+            width: 100%;
+        }
+
+        /* Section Cards */
+        .section-card {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 40px;
-            max-width: 1050px;
-            width: 100%;
             align-items: center;
-            background-color: #4a5d54; /* Muted green-grey banner style */
-            padding: 50px;
+            background-color: #4a5d54; /* Muted green-grey tone */
+            padding: 45px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Left Side: Briefing Text strictly in black/dark on light, or adjusted for contrast. Let's make text crisp white/light against the banner, but keeping your layout structure */
-        .about-section {
+        /* Text Content Styling */
+        .content-side {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             color: #ffffff;
         }
 
-        .about-section h2 {
-            font-size: 2rem;
+        .content-side h2 {
+            font-size: 1.8rem;
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
-        .about-section p {
-            font-size: 1rem;
+        .content-side p {
+            font-size: 0.95rem;
             font-weight: 300;
             line-height: 1.6;
-            color: #e0e0e0;
+            color: #f1f1f1;
         }
 
-        /* Subtitle for Kojic Acid Sakura */
-        .product-subtitle {
-            font-size: 1.1rem;
+        .subtitle {
+            font-size: 1.05rem;
             font-weight: 500;
             color: #ffccd5;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Right Side: Square frame with rounded corners for the product photo */
-        .image-container {
+        /* Square Frame with Round Corners for Photos */
+        .image-side {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .image-container img {
-            width: 380px;
-            height: 380px;
+        .image-side img {
+            width: 320px;
+            height: 320px;
             object-fit: cover;
-            border-radius: 20px; /* Square frame with round corners */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px; /* Square frame with round corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 3px solid rgba(255, 255, 255, 0.2);
         }
 
         /* Responsive design for smaller screens */
         @media (max-width: 768px) {
-            .container {
+            .section-card {
                 grid-template-columns: 1fr;
                 text-align: center;
                 padding: 30px;
             }
 
-            .about-section {
+            .content-side {
                 align-items: center;
             }
 
@@ -118,10 +123,10 @@
                 font-size: 3.5rem;
             }
 
-            .image-container img {
+            .image-side img {
                 width: 100%;
-                max-width: 320px;
-                height: 320px;
+                max-width: 280px;
+                height: 280px;
             }
         }
     </style>
@@ -133,25 +138,43 @@
         <h1 class="brand-title">Miki's Cosmetics</h1>
     </header>
 
-    <!-- Main Content Box -->
-    <div class="container">
-        <!-- Left Side: Company Briefing & Kojic Acid Sakura Line -->
-        <div class="about-section">
-            <h2>Skincare Essentials</h2>
-            <div class="product-subtitle">Kojic Acid Sakura Collection</div>
-            <p>
-                Discover the ultimate radiance routine. Formulated with nourishing Kojic Acid and delicate Sakura extracts, our collection works harmoniously to repair your skin barrier, deeply hydrate, and unveil a luminous, natural glow.
-            </p>
-            <p>
-                Explore our signature lineup featuring perfectly aligned skincare favorites, including our featured body scrub with its rich, vibrant texture ready to restore your skin.
-            </p>
+    <div class="main-wrapper">
+        
+        <!-- SECTION 1: Company Briefing & White Skincare Tub -->
+        <div class="section-card">
+            <div class="content-side">
+                <h2>Timeless Beauty</h2>
+                <p>
+                    Welcome to Miki's Cosmetics, where ancient botanical traditions meet modern skincare science. We believe that true beauty stems from confidence, nourishment, and daily self-care.
+                </p>
+                <p>
+                    Our curated essentials are meticulously crafted to enhance your natural glow, keeping your skin radiant, deeply hydrated, and protected every single day.
+                </p>
+            </div>
+            <div class="image-side">
+                <!-- White tub/bottle skincare product photo in a square with round corners -->
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Miki's Cosmetics Skincare Product">
+            </div>
         </div>
 
-        <!-- Right Side: Square frame with rounded corners showcasing the products -->
-        <div class="image-container">
-            <!-- Simulated showcase photo with skincare items side-by-side and open scrub -->
-            <img src="https://images.unsplash.com/photo-1608248597359-99e6b7720993?auto=format&fit=crop&w=800&q=80" alt="Miki's Cosmetics Kojic Acid Sakura Skincare Line">
+        <!-- SECTION 2: Kojic Acid Sakura Part (Underneath with a gap) -->
+        <div class="section-card">
+            <div class="content-side">
+                <h2>Skincare Lineup</h2>
+                <div class="subtitle">Kojic Acid Sakura Collection</div>
+                <p>
+                    Discover our signature radiance routine formulated with nourishing Kojic Acid and delicate Sakura extracts. It works harmoniously to repair your skin barrier and unveil a luminous glow.
+                </p>
+                <p>
+                    Featuring our special collection layout with the open body scrub displayed sideways so you can experience its rich, vibrant texture firsthand.
+                </p>
+            </div>
+            <div class="image-side">
+                <!-- Working product lineup image for Kojic Acid Sakura in a square with round corners -->
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Kojic Acid Sakura Collection">
+            </div>
         </div>
+
     </div>
 
 </body>
