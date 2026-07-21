@@ -286,6 +286,110 @@
             filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.3));
         }
 
+        /* Hair Clip Promo Banner Section */
+        .clip-banner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .clip-banner-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .clip-banner-content h2 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.15;
+            color: #111111;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .clip-banner-content .clip-offer {
+            font-size: 1rem;
+            color: #222222;
+            margin-bottom: 6px;
+        }
+
+        .clip-banner-content .clip-terms {
+            font-size: 0.75rem;
+            color: #777777;
+            margin-bottom: 20px;
+        }
+
+        .clip-shop-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #111111;
+            text-decoration: underline;
+            width: fit-content;
+        }
+
+        .clip-banner-image-side {
+            position: relative;
+            height: 100%;
+            min-height: 340px;
+            background: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clip-card {
+            width: 200px;
+            height: 300px;
+            background: #161616;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .clip-card .clip-brand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 26px;
+            color: #ffffff;
+        }
+
+        .clip-card .clip-sub {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            color: #d9a9b3;
+            margin-top: 2px;
+        }
+
+        .clip-card img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 24px;
+            filter: brightness(1.15) contrast(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .clip-banner {
+                grid-template-columns: 1fr;
+            }
+
+            .clip-banner-content {
+                text-align: center;
+                align-items: center;
+                padding: 35px;
+            }
+        }
+
         /* ==========================================
            PRODUCT SHOWCASE SECTION (Strictly Makeup Palettes)
            ========================================== */
@@ -655,6 +759,23 @@
             </div>
             <div class="sales-image-side">
                 <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Cosmetics Collection">
+            </div>
+        </div>
+
+        <!-- SECTION 4.5: Hair Clip Promo Banner -->
+        <div class="clip-banner">
+            <div class="clip-banner-content">
+                <h2>Perfect Your Look,<br>Anytime, Anywhere</h2>
+                <p class="clip-offer">Hair Clips when you spend R1200</p>
+                <p class="clip-terms">*Offer valid until 25th of July at 9:00AM. Gifts available until stock lasts.</p>
+                <a href="#shop" class="clip-shop-link">SHOP NOW</a>
+            </div>
+            <div class="clip-banner-image-side">
+                <div class="clip-card">
+                    <span class="clip-brand">Miki's</span>
+                    <span class="clip-sub">COSMETICS</span>
+                    <img src="https://images.unsplash.com/photo-1744177762256-e2594b4894b6?auto=format&fit=crop&w=400&q=80" alt="Gold hair claw clip">
+                </div>
             </div>
         </div>
 
