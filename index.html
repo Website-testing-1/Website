@@ -286,6 +286,88 @@
             filter: drop-shadow(-10px 10px 20px rgba(0, 0, 0, 0.3));
         }
 
+        /* Why To Buy Online Section */
+        .why-buy-section {
+            background-color: #4a5d54;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-buy-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .why-buy-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .why-buy-card-image {
+            position: relative;
+            width: 100%;
+            height: 160px;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .why-buy-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-buy-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #111111;
+        }
+
+        .why-buy-card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-transform: uppercase;
+            line-height: 1.3;
+            margin: 16px 0 10px;
+        }
+
+        .why-buy-shop-link {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 900px) {
+            .why-buy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .why-buy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Hair Clip Promo Banner Section */
         .clip-banner {
             display: grid;
@@ -759,6 +841,45 @@
             </div>
             <div class="sales-image-side">
                 <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Cosmetics Collection">
+            </div>
+        </div>
+
+        <!-- SECTION 4.6: Why To Buy Online -->
+        <div class="why-buy-section">
+            <h2 class="why-buy-title">Why To Buy Online</h2>
+            <div class="why-buy-grid">
+                <div class="why-buy-card">
+                    <div class="why-buy-card-image">
+                        <img src="https://images.unsplash.com/photo-1587313512268-a3b47aa30166?auto=format&fit=crop&w=400&q=80" alt="Lipstick product shot">
+                        <span class="why-buy-icon">&#128666;</span>
+                    </div>
+                    <h3>Free Shipping with +500 ZAR</h3>
+                    <a href="#shop" class="why-buy-shop-link">SHOP</a>
+                </div>
+                <div class="why-buy-card">
+                    <div class="why-buy-card-image">
+                        <img src="https://images.unsplash.com/photo-1579752515255-40a127455074?auto=format&fit=crop&w=400&q=80" alt="Lips with lipstick">
+                        <span class="why-buy-icon">&#127873;</span>
+                    </div>
+                    <h3>Gifts All Year Long!</h3>
+                    <a href="#shop" class="why-buy-shop-link">SHOP</a>
+                </div>
+                <div class="why-buy-card">
+                    <div class="why-buy-card-image">
+                        <img src="https://images.unsplash.com/photo-1571646034647-52e6ea84b28c?auto=format&fit=crop&w=400&q=80" alt="Collection of lipsticks">
+                        <span class="why-buy-icon">&#128274;</span>
+                    </div>
+                    <h3>Subscribe and Get 15% Off</h3>
+                    <a href="#shop" class="why-buy-shop-link">SHOP</a>
+                </div>
+                <div class="why-buy-card">
+                    <div class="why-buy-card-image">
+                        <img src="https://images.unsplash.com/photo-1579752515149-489d8d711342?auto=format&fit=crop&w=400&q=80" alt="Beauty model portrait">
+                        <span class="why-buy-icon">&#10022;</span>
+                    </div>
+                    <h3>Online Promotions</h3>
+                    <a href="#shop" class="why-buy-shop-link">SHOP</a>
+                </div>
             </div>
         </div>
 
