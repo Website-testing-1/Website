@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miki's Cosmetics</title>
-    <!-- Importing Google Fonts for a clean, modern cosmetic brand look -->
+    <!-- Importing Google Fonts: Calligraphy + Clean Sans-Serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -21,127 +21,135 @@
             font-family: 'Poppins', sans-serif;
             color: #2b2b2b;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
             padding: 20px;
         }
 
-        /* Hero Banner Container */
-        .hero-banner {
+        /* Centered Calligraphy Title at the Top */
+        header {
+            margin-bottom: 25px; /* Small gap between the title and the main section */
+            text-align: center;
+        }
+
+        .brand-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            color: #b76e79; /* Soft rose accent for the title */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Main Container */
+        .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            background-color: #4a5d54; /* Sophisticated muted green-grey tone from the reference style */
-            max-width: 1100px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            max-width: 1050px;
             width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
+            align-items: center;
+            background-color: #4a5d54; /* Muted green-grey banner style */
+            padding: 50px;
+            border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
-        /* Left Side: Text and CTA */
-        .hero-content {
-            padding: 60px 40px;
-            color: #ffffff;
+        /* Left Side: Briefing Text strictly in black/dark on light, or adjusted for contrast. Let's make text crisp white/light against the banner, but keeping your layout structure */
+        .about-section {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            color: #ffffff;
         }
 
-        .hero-content h1 {
-            font-size: 2.5rem;
+        .about-section h2 {
+            font-size: 2rem;
             font-weight: 600;
-            letter-spacing: 1px;
-            line-height: 1.2;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
-        .hero-content p {
+        .about-section p {
             font-size: 1rem;
             font-weight: 300;
-            line-height: 1.5;
+            line-height: 1.6;
             color: #e0e0e0;
         }
 
-        /* Shop Button */
-        .shop-btn {
-            display: inline-block;
-            background-color: #ffffff;
-            color: #2b2b2b;
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
+        /* Subtitle for Kojic Acid Sakura */
+        .product-subtitle {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffccd5;
             text-transform: uppercase;
-            width: fit-content;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
         }
 
-        .shop-btn:hover {
-            background-color: #ffeff3;
-            transform: translateY(-2px);
-        }
-
-        /* Right Side: Product Image Display */
-        .hero-image-container {
-            width: 100%;
-            height: 100%;
+        /* Right Side: Square frame with rounded corners for the product photo */
+        .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            position: relative;
         }
 
-        .hero-image-container img {
-            width: 100%;
-            height: 100%;
+        .image-container img {
+            width: 380px;
+            height: 380px;
             object-fit: cover;
-            min-height: 450px;
+            border-radius: 20px; /* Square frame with round corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 4px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* Responsive Design for Mobile Devices */
+        /* Responsive design for smaller screens */
         @media (max-width: 768px) {
-            .hero-banner {
+            .container {
                 grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px;
             }
 
-            .hero-content {
-                padding: 40px 20px;
-                text-align: center;
+            .about-section {
                 align-items: center;
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
+            .brand-title {
+                font-size: 3.5rem;
             }
 
-            .hero-image-container img {
-                max-height: 350px;
-                min-height: auto;
+            .image-container img {
+                width: 100%;
+                max-width: 320px;
+                height: 320px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="hero-banner">
-        <!-- Left Side: Branding and Briefing -->
-        <div class="hero-content">
-            <h1>Miki's Cosmetics Kojic Acid Sakura</h1>
+    <!-- Centered Calligraphy Title -->
+    <header>
+        <h1 class="brand-title">Miki's Cosmetics</h1>
+    </header>
+
+    <!-- Main Content Box -->
+    <div class="container">
+        <!-- Left Side: Company Briefing & Kojic Acid Sakura Line -->
+        <div class="about-section">
+            <h2>Skincare Essentials</h2>
+            <div class="product-subtitle">Kojic Acid Sakura Collection</div>
             <p>
                 Discover the ultimate radiance routine. Formulated with nourishing Kojic Acid and delicate Sakura extracts, our collection works harmoniously to repair your skin barrier, deeply hydrate, and unveil a luminous, natural glow.
             </p>
-            <a href="#shop" class="shop-btn">Shop Kojic Sakura</a>
+            <p>
+                Explore our signature lineup featuring perfectly aligned skincare favorites, including our featured body scrub with its rich, vibrant texture ready to restore your skin.
+            </p>
         </div>
 
-        <!-- Right Side: Skincare Products Showcase Photo -->
-        <div class="hero-image-container">
-            <!-- Showcasing the skincare products nicely lined up with the body scrub open and sideways -->
+        <!-- Right Side: Square frame with rounded corners showcasing the products -->
+        <div class="image-container">
+            <!-- Simulated showcase photo with skincare items side-by-side and open scrub -->
             <img src="https://images.unsplash.com/photo-1608248597359-99e6b7720993?auto=format&fit=crop&w=800&q=80" alt="Miki's Cosmetics Kojic Acid Sakura Skincare Line">
         </div>
     </div>
