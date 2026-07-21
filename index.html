@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miki's Cosmetics</title>
+    <!-- Importing a gorgeous calligraphy font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffeff3; /* Light soft pink background */
+            font-family: 'Poppins', sans-serif;
+            color: #2b2b2b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Calligraphy font styling for the centered header */
+        .brand-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            color: #b76e79; /* Soft rose accent for the title */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 900px;
+            width: 100%;
+            align-items: center;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.1);
+        }
+
+        /* Briefing text on the left, strictly black text */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .about-section h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #000000; /* Written in black as requested */
+        }
+
+        /* Image frame on the right with a square shape and rounded corners */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 25px; /* Smooth rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border: 3px solid #fff;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .about-section {
+                align-items: center;
+            }
+
+            .brand-title {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="brand-title">Miki's Cosmetics</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left Side: Made-up company briefing in black -->
+        <div class="about-section">
+            <h2>Timeless Beauty, Modern Care</h2>
+            <p>
+                Welcome to Miki's Cosmetics, where ancient botanical traditions meet modern skincare science. We believe that true beauty stems from confidence, nourishment, and self-care. 
+            </p>
+            <p>
+                Our curated collections of clean skincare essentials and velvety makeup formulas are meticulously crafted to enhance your natural glow, keeping your skin radiant and protected every single day.
+            </p>
+        </div>
+
+        <!-- Right Side: Square frame with rounded corners featuring the product label -->
+        <div class="image-container">
+            <!-- Using a placeholder image that fits skincare/cosmetics and featuring the label text on the bottle graphic -->
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Miki's Cosmetics Skincare Product">
+        </div>
+    </div>
+
+</body>
+</html>
